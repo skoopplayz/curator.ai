@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>curator.ai</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+</head>
+<body class="bg-white text-black min-h-screen">
+
+    <header class="p-4 flex justify-end">
+    </header>
+
+    <main class="max-w-md mx-auto px-6 pb-20">
+        
+        <div id="stage-interests" class="space-y-8 py-10">
+            <h1 class="text-3xl font-bold text-center">Choose your interests</h1>
+            <div class="grid grid-cols-2 gap-3" id="interests-grid"></div>
+            <button id="done-btn" class="w-full py-4 bg-black text-white dark:bg-white dark:text-black rounded-full font-bold text-xl mt-8">Done</button>
+        </div>
+
+        <div id="stage-loading" class="hidden py-10 space-y-6">
+            <h1 class="text-xl font-bold">Searching news sites...</h1>
+            <div class="space-y-4">
+                <div class="skeleton h-24 w-full rounded-xl"></div>
+                <div class="skeleton h-24 w-full rounded-xl"></div>
+                <div class="skeleton h-24 w-full rounded-xl"></div>
+            </div>
+        </div>
+
+        <div id="stage-feed" class="hidden py-10 space-y-8">
+            <h1 class="text-xl font-bold">We think you will like,</h1>
+            <div id="articles-container" class="space-y-4"></div>
+            
+            <button id="load-more-btn" class="w-full py-3 bg-gray-100 dark:bg-gray-900 rounded-xl font-semibold hover:bg-gray-200 dark:hover:bg-gray-800 transition">Load More</button>
+
+            <div class="mt-12">
+                <h2 class="text-lg font-bold mb-4">Here's why we curated these,</h2>
+                <div class="bg-gray-100 dark:bg-gray-900 p-6 rounded-2xl relative">
+                    <div id="ai-reasoning" class="text-sm leading-relaxed mb-4 text-gray-700 dark:text-gray-300">
+                        Analyzing...
+                    </div>
+                    
+                    <div class="flex justify-end mt-4">
+                        <div id="ai-ask-container" class="relative flex items-center bg-white dark:bg-gray-800 rounded-full shadow-sm overflow-hidden border border-gray-200 dark:border-gray-700 h-11">
+                            <input id="ai-ask-input" type="text" placeholder="Ask about these picks..." class="hidden w-full bg-transparent px-4 py-2 outline-none text-sm">
+                            <button id="ai-ask-trigger" class="flex-shrink-0 w-11 h-11 flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+                                <i data-lucide="help-circle" class="w-5 h-5"></i>
+                            </button>
+                            <button id="ai-send-btn" class="hidden flex-shrink-0 w-11 h-11 flex items-center justify-center text-blue-500">
+                                <i data-lucide="send" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="inline-chat-response" class="mt-4 text-sm font-medium border-t border-gray-200 dark:border-gray-700 pt-4 hidden"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+</body>
+<script src="script.js"></script>
+<link rel="stylesheet" href="style.css">
+</html>
