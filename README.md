@@ -13,3 +13,5 @@ if you choose to fork, make sure that you put your own `API_KEY` url in the conf
 css
 html
 js
+
+*made in an hour and wip*
