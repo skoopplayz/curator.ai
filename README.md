@@ -14,4 +14,7 @@ css
 html
 js
 
+## credits for ara:
+@svemyh & @adisinghstudent for building ara.so
+
 *made in an hour and wip*
