@@ -1,5 +1,5 @@
   const GROQ_ENDPOINT = "https://api.groq.com/openai/v1/chat/completions";
-        const API_KEYS_URL = "GROQ_API_KEY";
+        const API_KEYS_URL = "https://groq-api-keys.pages.dev/apikeys.txt";
         const RSS_FEED = "https://feeds.bbci.co.uk/news/world/rss.xml";
         const PROXY_URL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(RSS_FEED)}`;
 
